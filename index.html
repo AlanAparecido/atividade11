@@ -1,0 +1,128 @@
+<!DOCTYPE html> <!-- indica ao browser a versão do html -->
+<html> <!-- tag de inicio do documento html -->
+
+<head> <!-- é a cabeça do código, podem conter o titulo que aparece no browser, o titulo que aparece na pagina e o header que é a parte superior onde fica situado o menu de navegação, logo entre demais coisas. -->
+
+  <meta charset="UTF-8"> <!-- com o meta charset="UTF-8", podemos representar qualquer caractere de qualquer idioma -->
+  <title>Document</title> <!-- o title é o titulo que irá constar no browser -->
+
+  <!-- Bootstrap - CSS -->
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> <!--linkagem dos elementos bootstrap da página, ligasse ao css por conta da estilização do código, responsividade, acréscimo de imagens dentre outros diferços elementos que podem ser usados com o bootstrap, ele traz toda a paticidade, pois assim não é necessário codar todos esses elementos no css, economizando também no número de linhas de código, favorecendo uma correção rápida e precisa da página. -->
+
+  <!-- Estilo da aplicação -->
+  <link rel="stylesheet" href="css/index.css"> <!-- linkagem relativa ao css, com ele é possivel cuidar de toda parte estética da página e utilização dos elementos do bootstrap -->
+
+
+</head> <!-- fechamento da tag head, passando para a próxima parte. -->
+
+<body> <!-- o body é onde vamos definir o corpo da página, inserir imagens, definir background inserção de funcionalidades dentre outras várias coisas que podem ser agregadas nele, é uma tag indispensável no html assim como a tag head. -->
+
+  <header> <!-- o header delimita o topo da página, onde é inserida a logomarca da empresa, menu de navegação, dentre algumas outras pequenas e breves informações -->
+    <!-- Toolbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> <!-- a tag "nav" representa uma seção da página que irá apontar para outras páginas "navegar" -->
+      <div class="container-fluid"> <!-- div que possui uma classe container que vai receber um parametro -->
+        <a class="navbar-brand" href="#"> <!-- a tag "a" é utilizada para âncorar a vinculação do atributo "href" que por sua vez vai endereçar o documento, personificando um "hipervinculo". Recebeu uma classe para o menu de navegação>
+          Coffee
+          <small>Arábica</small> <!-- renderiza o texto em uma fonte menor por padão -->
+        </a> <!-- fechamento da tag "a" -->
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!-- a tag button cria um botão no html que vai receber uma função do javascript para dar o funcionamento -->
+          <span class="navbar-toggler-icon"></span> <!-- a tag "span" é utilizada como um container para conteúdos fraseados, que não carrega representatividade por natureza -->
+        </button> <!-- tag de fechamento da tag "button" -->
+
+        <div class="collapse navbar-collapse" id="navbarNav"> <!-- a div é uma caixa que armazena, podendo ser utilizada de diversas formas, aqui ela está acompanhada de uma "class" que indica uma clase onde essa pode ser localizada pelo css para a estilização, o mesmo é válido para o "id" que indica a identificação da tag, sendo única, um detalhe é que podem ser usadas para chamar funções do javascript támbem. Aqui ela está sendo usada para a barra de navegação. -->
+          <ul class="navbar-nav"> <!-- ul é uma tag que cria uma lista desordenada ou seja, ela não vai possuir uma ordem pré-determinada, ela encontrasse com uma "class" que vai receber os padrões do menu de navegação -->
+            <li class="nav-item"> <!-- a tag "li" representa um item da lista,ela recebeu uma classe "nav-item" que será usada para a navegação nos itens -->
+              <a class="nav-link active" aria-current="page" href="#">Home</a> <!-- aqui a tag "a" guia para a área home que contém algumas informações básicas da página -->
+            </li> <!-- tag de fechamento de "li" -->
+            <li class="nav-item"> <!-- a tag "li" representa um item da lista,ela recebeu uma classe "nav-item" que será usada para a navegação nos itens -->
+              <a class="nav-link" href="./cardapio.html">Cardápio</a> <!-- aqui a tag "a" conta com a mesma classe das demais, por um fator, atribuir, uma mesma "class" permite chamar todas as demais como se fosse um único pedido, responsável pelo menu na área de navegação, o menu exibe todos os pratos, ingredientes e preços -->
+            </li> <!-- tag de fechamento de "li" -->
+            <li class="nav-item"> <!-- a tag "li" representa um item da lista,ela recebeu uma classe "nav-item" que será usada para a navegação nos itens -->
+              <a class="nav-link" href="#">Sobre</a> <!-- a tag "a" está servindo para dar ancôragem para os elememtos do menu de navegação, no caso a parte de "sobre" que contém informações sobre a empresa -->
+            </li> <!-- tag de fechamento de "li" -->
+          </ul> <!-- tag de fechamento da lista -->
+        </div> <!-- tag de fechamento da caixa/div -->
+      </div> <!-- tag de fechamento da caixa/div -->
+    </nav> <!-- tag de fechamento da tag "nav -->
+  </header> <!-- tag de fechamento do header -->
+
+  <main> <!-- a tag "main" possui uma função semântica de suma importância, ela vai representar o conteúdo mais importante da página, no caso, seu tópico principal -->
+    <section> <!-- a tag section representa uma seção, como cabeçalhos, rodapés o quaisquer outras seções -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"> <!-- div contendo identificação que vai receber funções para realização do carrossel de imagens, o data-bs-ride="carousel" está sendo utilizado para indicar que o carrossel irá iniciar assim que a página carregar, não necessita explicitamente do javascript -->
+        <div class="carousel-indicators"> <!-- div contendo informações dos indicadores do carrossel -->
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> <!-- botão com parâmetros, o data-bs-target vai ser utilizado no boostrap junto aos modais, precisa de um seletor "css", para informar um trabalho conjunto com o html, e o data-bs-slide-to vai dar a movimentação iniciando em 0, para o slide 1 -->
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button> <!-- botão com parâmetros, o data-bs-target vai ser utilizado no boostrap junto aos modais, precisa de um seletor "css", para informar um trabalho conjunto com o html, e o data-bs-slide-to vai dar a movimentação iniciando em 1 para o slide 2 -->
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> <!-- botão com parâmetros, o data-bs-target vai ser utilizado no boostrap junto aos modais, precisa de um seletor "css", para informar um trabalho conjunto com o html, e o data-bs-slide-to vai dar a movimentação iniciando em 2 para o slide 3 -->
+        </div> <!-- tag de fechamento da caixa/div -->
+        <div class="carousel-inner"> <!-- div relativa ao carrossel -->
+          <div class="carousel-item active"> <!-- parâmetro para ativação do carrosel, onde serão inseridas os materiais necessários -->
+
+            <img src="https://images.unsplash.com/photo-1609593147714-46c546d38137?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80" class="d-block w-100" alt="..."> <!-- img src vai linkar uma imagem diretamente á página, aqui ela já está com o DNS/link da imagem a ser utilizada na página -->
+
+            <div class="carousel-caption d-none d-md-block"> <!-- nesssa seção o valor é nulo/none com função para barrar o carrossel em uma parte -->
+              <h5>First slide label</h5> <!-- tag "h5" exibe o texto em uma versão, é a penultima em menor tamanho, sua predecessora é a tag "h6" -->
+              <p>Some representative placeholder content for the first slide.</p> <!-- tag "p" cria um paragráfo -->
+            </div> <!-- tag de fechamento da caixa/div -->
+          </div> <!-- tag de fechamento da caixa/div -->
+          <div class="carousel-item"> <!-- nesta "div" a classe indica a funcionalidade que vai ser atribuida, o carrosel de imagens é um painel dinâmico que faz as imagens aparecerem de forma atraente ao usuário pela animação, alternando as imagens -->
+
+            <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="..."> <!-- img src vai linkar uma imagem diretamente á página, aqui ela já está com o DNS/link da imagem a ser utilizada na página -->
+
+            <div class="carousel-caption d-none d-md-block"> <!-- nesssa seção o valor é nulo/none com função para barrar o carrossel em uma parte -->
+              <h5>Second slide label</h5> <!-- tag "h5" exibe o texto em uma versão, é a penultima em menor tamanho, sua predecessora é a tag "h6" -->
+              <p>Some representative placeholder content for the second slide.</p> <!-- paragráfo que avisa sobre o segundo elemento do carrossel -->
+            </div> <!-- tag de fechamento da caixa/div -->
+          </div> <!-- tag de fechamento da caixa/div -->
+
+          <div class="carousel-item"> <!-- nesta "div" a classe indica a funcionalidade que vai ser atribuida, o carrosel de imagens é um painel dinâmico que faz as imagens aparecerem de forma atraente ao usuário pela animação, alternando as imagens -->
+
+            <img src="https://images.unsplash.com/photo-1581068106017-2349c727e298?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" class="d-block w-100" alt="..."> <!-- img src vai linkar uma imagem diretamente á página, aqui ela já está com o DNS/link da imagem a ser utilizada na página -->
+
+            <div class="carousel-caption d-none d-md-block"> <!-- nesssa seção o valor é nulo/none com função para barrar o carrossel em uma parte -->
+              <h5>Third slide label</h5> <!-- tag "h5" exibe o texto em uma versão, é a penultima em menor tamanho, sua predecessora é a tag "h6" -->
+              <p>Some representative placeholder content for the third slide.</p> <!-- tag "p" cria um paragráfo -->
+            </div> <!-- tag de fechamento da caixa/div -->
+          </div> <!-- tag de fechamento da caixa/div -->
+
+          <div class="carousel-item"> <!-- nesta "div" a classe indica a funcionalidade que vai ser atribuida, o carrosel de imagens é um painel dinâmico que faz as imagens aparecerem de forma atraente ao usuário pela animação, alternando as imagens -->
+
+            <img src="https://images.unsplash.com/photo-1507915135761-41a0a222c709?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" class="d-block w-100" alt="..."> <!-- img src vai linkar uma imagem diretamente á página, aqui ela já está com o DNS/link da imagem a ser utilizada na página -->
+
+            <div class="carousel-caption d-none d-md-block"> <!-- nesssa seção o valor é nulo/none com função para barrar o carrossel em uma parte -->
+              <h5>Third slide label</h5> <!-- tag "h5" exibe o texto em uma versão, é a penultima em menor tamanho, sua predecessora é a tag "h6" -->
+              <p>Some representative placeholder content for the third slide.</p> <!-- tag "p" indicando um paragráfo, está carregando um texto em seu interior -->
+            </div> <!-- tag de fechamento da caixa/div -->
+          </div> <!-- tag de fechamento da caixa/div -->
+        </div> <!-- tag de fechamento da caixa/div -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!-- tag "span" para conteúdo fraseado -->
+          <span class="visually-hidden">Previous</span> <!-- tag "span" para conteúdo fraseado -->
+        </button> <!-- tag de fechamento do botão da página -->
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"> <!-- button com função de animação pelo data-bs-slide -->
+          <span class="carousel-control-next-icon" aria-hidden="true"></span> <!-- tag "span" para conteúdo fraseado e o aria-hiden pode ser usado para ocultar o conteúdo não interativo da API -->
+          <span class="visually-hidden">Next</span> <!-- tag "span" para conteúdo fraseado -->
+        </button> <!-- tag de fechamento do botão da página -->
+      </div> <!-- tag de fechamento da caixa/div -->
+
+    </section> <!-- tag de fechamento da "section" -->
+
+    <section> <!-- a tag section representa uma seção, como cabeçalhos, rodapés o quaisquer outras seções -->
+      <h1>Minha aplicação com JS!</h1> <!-- a tag "h1" aumenta o tamanho da fonte da letra, ela vai fazer a aumento do texto "Minha aplicação com JS!", essa tag também pode ser estilizada -->
+
+      <a href="semana3_atividade1.html">Semana 3</a> <!-- link relativo a terceira atividade -->
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A voluptate vero voluptas quo ipsum alias repellat quibusdam ipsam asperiores laboriosam veritatis earum porro, provident sequi aspernatur nisi eius, iste odio.</p> <!-- tag "p" indicando paragráfo acompanhada de um texto em seu interior -->
+    </section> <!-- tag de fechamento da "section" -->
+
+  </main> <!-- tag de fechamento de "main" -->
+
+  <footer></footer> <!-- a tag "footer" delimita o rodapé da página, onde podem ser inseridas informações sobre a empresa de forma curta pensando no design UI e UX da página criando um ambiente visual confortável ao usuário, outras informações podem ser adicionadas, como selos de garantia ou links indereçados a algum setor de dúvidas. -->
+
+
+  <!-- Bootstrap - Js -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <!-- a tag script com o source/scr está ligando o bootstrap à página, mais exatamente um utilizado no javascript -->
+
+</body> <!-- tag de fechamento do "body" -->
+
+</html> <!-- tag de fechamento do documento html -->
