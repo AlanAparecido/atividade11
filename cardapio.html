@@ -1,0 +1,130 @@
+<!DOCTYPE html> <!-- indica ao browser a versão do html -->
+<html> <!-- tag de inicio do documento html -->
+
+<head> <!-- é a cabeça do código, podem conter o titulo que aparece no browser, o titulo que aparece na pagina e o header que é a parte superior onde fica situado o menu de navegação, logo entre demais coisas. -->
+  <meta charset="UTF-8"> <!-- com o meta charset="UTF-8", podemos representar qualquer caractere de qualquer idioma -->
+  <title>Cardápio</title> <!-- o title é o titulo que irá constar no browser -->
+
+  <!-- Bootstrap - CSS -->
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> <!--linkagem dos elementos bootstrap da página, ligasse ao css por conta da estilização do código, responsividade, acréscimo de imagens dentre outros diferços elementos que podem ser usados com o bootstrap, ele traz toda a paticidade, pois assim não é necessário codar todos esses elementos no css, economizando também no número de linhas de código, favorecendo uma correção rápida e precisa da página. -->
+
+</head> <!-- fechamento da tag head, passando para a próxima parte. -->
+
+<body> <!-- o body é onde vamos definir o corpo da página, inserir imagens, definir background inserção de funcionalidades dentre outras várias coisas que podem ser agregadas nele, é uma tag indispensável no html assim como a tag head. -->
+  <header> <!-- o header delimita o topo da página, onde é inserida a logomarca da empresa, menu de navegação, dentre algumas outras pequenas e breves informações -->
+    <!-- Toolbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid"> <!-- container fluid não vai exibir as margens -->
+        <a class="navbar-brand" href="#">
+          Coffee
+          <small>Arábica</small> <!-- renderiza o texto em uma fonte menor por padão -->
+        </a> <!-- fechamento da tag "a" -->
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> <!-- tag de fechamento do botão da página -->
+                                                    <!-- aqui abaixo podemos ver a barra de navegação em forma de lista desordenada contendo as informações necessárias para o conumidor ficar a par dos produtos e informações da empresa -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li> <!-- a tag "li" representa um item da lista -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Cardápio</a>
+            </li> <!-- a tag "li" representa um item da lista -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre</a>
+            </li> <!-- a tag "li" representa um item da lista -->
+          </ul> <!-- tag de fechamento da lista -->
+        </div> <!-- fechamento da tag div -->
+      </div> <!-- fechamento da tag div -->
+    </nav> <!-- fechamento da tag nav -->
+
+  </header> <!-- o header delimita o topo da página, onde é inserida a logomarca da empresa, menu de navegação, dentre algumas outras pequenas e breves informações -->
+  <main> <!-- a tag "main" possui uma função semântica de suma importância, ela vai representar o conteúdo mais importante da página, no caso, seu tópico principal -->
+    <section class="my-3">
+
+      <!-- Grid -->
+      <div class="container"> <!-- div que irá conter valores em seu interior -->
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"> <!-- botão pra adicionar produtos na página -->
+          +
+        </button> <!-- tag de fechamento do botão da página -->
+
+        <!-- Modal --> <!-- tags div que vão receber os modais, do header, title, e ocultar teclado -->
+        <div class="modal fade" data-bs-keyboard="false" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content"> 
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Adicionar Item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div> <!-- fechamento da tag div -->
+              <div class="modal-body">
+
+                <h1>Conteúdo do modal</h1> <!-- exibe o texto em uma versão maior -->
+
+                <!-- Formulário -->
+                <form id="foodForm"> <!-- tag que vai criar um formulário -->
+                  <div class="mb-3">
+                    <!-- Nome -->
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" name="nome" id="nome" class="form-control">
+                    <div id="nomeHelp" class="form-text">Adicione o nome do Alimento.</div> <!-- adiciona o nome do alimento -->
+                  </div> <!-- fechamento da tag div -->
+
+                  <!-- Descrição -->
+                  <div class="mb-3">
+                    <label for="descricao" class="form-label">Descrição</label> <!-- descrição do produto -->
+                    <input type="text" name="descricao" id="descricao" class="form-control"> <!-- o input vai inserir várias coisas de uma vez, pois está sendo atribuido várias funções -->
+                  </div> <!-- fechamento da tag div -->
+
+                  <!-- Preço -->
+                  <div class="mb-3">
+                    <label for="preco" class="form-label">Preço</label>
+                    <input type="text" name="preco" id="preco" class="form-control">
+                  </div> <!-- fechamento da tag div -->
+
+                  <!-- Imagem -->
+                  <div class="mb-3">
+                    <label for="imagem" class="form-label">Imagem</label>
+                    <input type="text" name="imagem" id="imagem" class="form-control"> <!-- o input vai inserir várias coisas de uma vez, pois está sendo atribuido várias funções -->
+                  </div> <!-- fechamento da tag div -->
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+
+                    <!-- <input type="submit" value="Adicionar"> -->
+                    <button type="submit" class="btn btn-primary" id="adicionarFoodButton">
+                      Adicionar
+                    </button> <!-- tag de fechamento do botão da página -->
+                  </div> <!-- fechamento da tag div -->
+                </form> <!-- tag de fechamento do form -->
+
+              </div> <!-- fechamento da tag div -->
+
+            </div> <!-- fechamento da tag div -->
+          </div> <!-- fechamento da tag div -->
+        </div> <!-- fechamento da tag div -->
+
+        <!-- Linha -->
+        <div id="itens-cardapio" class="row"> <!-- div com identificação e classe, vai ser usadas para a animação de rolagem -->
+
+          <!-- Colunas-->
+
+          <!-- beforeend -->
+        </div> <!-- tag de fechamento da main -->
+
+    </section> <!-- tag de fechamento da section -->
+
+  </main> <!-- tag de fechamento da main -->
+  <footer></footer> <!-- a tag "footer" delimita o rodapé da página, onde podem ser inseridas informações sobre a empresa de forma curta pensando no design UI e UX da página criando um ambiente visual confortável ao usuário, outras informações podem ser adicionadas, como selos de garantia ou links indereçados a algum setor de dúvidas. -->
+
+  <!-- Cardápio -->
+  <script src="./js/cardapio.js" type="module"></script> <!-- linkagem do javascript à página -->
+
+  <!-- Bootstrap - Js -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <!-- linkagem do bootstrap pro javascript -->
+</body> <!-- tag de fechamento do "body" -->
+
+</html> <!-- tag de fechamento do documento html -->
